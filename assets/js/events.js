@@ -1,3 +1,5 @@
+import { PREFERENCES } from "./preferences.js"
+
 export const events = [
     {
         id: "event1",
@@ -7,7 +9,11 @@ export const events = [
         eventDate: "2026-02-23",
         postedByName: "John Doe",
         location: "123 Blvd",
-        people: [],
+        people: [
+            { peopleId: "p1", preference: PREFERENCES.FULL },
+            { peopleId: "p2", preference: PREFERENCES.PARTIAL },
+            { peopleId: "p3", preference: PREFERENCES.TRANSIT_ONLY },
+            { peopleId: "p4", preference: PREFERENCES.FLEXIBLE }],
         isViewed: false
     },
 
