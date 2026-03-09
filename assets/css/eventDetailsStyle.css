@@ -1,3 +1,30 @@
+/* Colors */
+:root {
+    /* Backgrounds */
+    --page-bg: #e9edf2;
+    --header-bg: #ffffff;
+
+    /* Text */
+    --text-primary: #111111;
+
+    /* Borders */
+    --border-color: #e6e6e6;
+
+    /* Shadows */
+    --shadow-header: 0 2px 6px rgba(0, 0, 0, 0.04);
+
+    /* Color pallete */
+    --cream: #FFFDF1;
+    --brown: #562F00;
+    --page-bg: var(--cream);
+    --header-bg: rgba(255, 253, 241, 0.92);
+    --text-primary: var(--brown);
+    --text-secondary: #7a5226;
+    --border-color: #f0d7bb;
+    --primary-button-color: #FFCE99;
+    --shadow-header: 0 4px 14px rgba(86, 47, 0, 0.08);
+}
+
 .hidden {
     visibility: hidden;
     pointer-events: none;
@@ -78,6 +105,7 @@ main {
     border-radius: 999px;
     border: 1px solid #e6e6e6;
     background: #fff;
+    margin-left: auto;
 }
 
 .bottom-cta {
@@ -94,11 +122,12 @@ main {
     letter-spacing: 0.4px;
 
     cursor: pointer;
-
+    background: var(--primary-button-color);
     box-shadow: 0 -2px 5px rgba(0,0,0,0.18);
     transition: transform 0.12s ease, filter 0.12s ease;
 }
 
 .bottom-cta:active {
+    filter: brightness(90%);
     transform: scale(0.99);
 }

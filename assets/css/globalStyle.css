@@ -8,10 +8,21 @@
     --text-primary: #111111;
 
     /* Borders */
-    --border-light: #e6e6e6;
+    --border-color: #e6e6e6;
 
     /* Shadows */
     --shadow-header: 0 2px 6px rgba(0, 0, 0, 0.04);
+
+    /* Color pallete */
+    --cream: #FFFDF1;
+    --brown: #562F00;
+    --page-bg: var(--cream);
+    --header-bg: rgba(255, 253, 241, 0.92);
+    --text-primary: var(--brown);
+    --text-secondary: #7a5226;
+    --border-color: #f0d7bb;
+    --primary-button-color: #FFCE99;
+    --shadow-header: 0 4px 14px rgba(86, 47, 0, 0.08);
 }
 
 * {
@@ -22,7 +33,8 @@
 
 body {
     font-family: 'Inter', sans-serif;
-    background-color: var(--page-bg);
+    background:
+        radial-gradient(circle at top, #fff7eb 0%, var(--page-bg) 45%);
     color: var(--text-primary);
 }
 
@@ -39,9 +51,10 @@ main {
     position: sticky;
     top: 0;
     background: var(--header-bg);
-    border-bottom: 1px solid var(--border-light);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border-color);
     box-shadow: var(--shadow-header);
-    z-index: 2;
+    z-index: 10;
 }
 
 .header-inner {
@@ -54,7 +67,7 @@ main {
 .logo {
     font-family: 'Passion One', sans-serif;
     font-size: 24px;
-    color: var(--text-primary);
+    color: var(--brown);
     letter-spacing: 0.5px;
 }
 
@@ -67,8 +80,13 @@ main {
     border: none;
     font-size: 18px;
     cursor: pointer;
-    color: var(--text-primary);
+    color: var(--brown);
     margin-right: 24px;
+    transition: transform 0.15s ease;
+}
+
+.back-btn:hover {
+    transform: scale(1.1);
 }
 
 .back-button-hidden {
