@@ -105,6 +105,10 @@ function renderAttendee(attendee) {
         toReturn.appendChild(nameDiv);
         toReturn.appendChild(genderDiv);
         toReturn.appendChild(preferenceDiv);
+
+        toReturn.addEventListener("click", () => {
+            window.location.href = `userBio.html?id=${attendee.id}`;
+        })
         return toReturn;
     } else {
         toReturn.textContent("attenndee not found");
