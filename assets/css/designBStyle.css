@@ -16,6 +16,11 @@
     border-radius: 999px;
     border: 1px solid #e6e6e6;
 }
+#design-b-filter-clear {
+    background: #fff;
+    width: 100%;
+    font-weight: 300;
+}
 #design-b-filter-button {
     font-size: 13px;
     font-weight: 700;

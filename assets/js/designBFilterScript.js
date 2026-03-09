@@ -2,9 +2,10 @@ import { attendeeList, currentFilter, renderAttendeeList } from "./designBScript
 
 //button handler declaration
 
-const filterButton = document.getElementById('design-b-filter-button')
-const applyButton = document.getElementById('design-b-filter-apply')
-const cancelButton = document.getElementById('design-b-filter-cancel')
+const filterButton = document.getElementById('design-b-filter-button');
+const applyButton = document.getElementById('design-b-filter-apply');
+const cancelButton = document.getElementById('design-b-filter-cancel');
+const clearButton = document.getElementById('design-b-filter-clear');
 
 const genderCheckboxes = document.querySelectorAll(".design-b-filter-gender-check");
 const preferenceCheckboxes = document.querySelectorAll(".design-b-filter-preference-check");
@@ -15,6 +16,7 @@ const filterOverlay = document.getElementById('design-b-filter-overlay');
 filterButton.addEventListener('click', handleFilterButtonOnClick);
 applyButton.addEventListener('click', handleApplyButtonOnClick);
 cancelButton.addEventListener('click', handleCancelButtonOnClick);
+clearButton.addEventListener('click', handleClearButtonOnClick);
 
 //on click handler
 function handleFilterButtonOnClick() {
@@ -25,6 +27,12 @@ function handleFilterButtonOnClick() {
 
 function handleCancelButtonOnClick() {
     closeFilter();
+}
+
+function handleClearButtonOnClick() {
+    currentFilter.gender = [];
+    currentFilter.preference = [];
+    restoreSelections();
 }
 
 function handleApplyButtonOnClick() {
