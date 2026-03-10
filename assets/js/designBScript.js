@@ -111,7 +111,7 @@ function renderAttendee(attendee) {
         })
         return toReturn;
     } else {
-        toReturn.textContent("attenndee not found");
+        toReturn.textContent("attendee not found");
     }
 }
 
