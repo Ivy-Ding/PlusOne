@@ -1,8 +1,7 @@
 :root {
     /* placeholder variables since we haven't settled with final palatte yet */
-    --row-backbround: #f6f7fb;
+    --row-backbround: lighten($var(--page-bg), 30%);
     --radius: 14px;
-    --accent: orange;
     /*matched eventDetails  */
     --textSize: 14px;
 }
@@ -14,33 +13,39 @@
     text-decoration: none;
     padding: 8px 10px;
     border-radius: 999px;
-    border: 1px solid #e6e6e6;
+    border: 1px solid var(--border-color);
 }
-#design-b-filter-clear {
-    background: #fff;
+
+#design-b-filter-clear,
+#design-b-filter-cancel {
+    background: lighten(var(--page-bg), 70%);
     width: 100%;
     font-weight: 300;
+    border: var(--border-color);
 }
+
 #design-b-filter-button {
     font-size: 13px;
     font-weight: 700;
     text-decoration: none;
     padding: 8px 10px;
     border-radius: 999px;
-    border: 1px solid #e6e6e6;
-    color: #111;
-    background: #fff;
+    border: 1px solid var(--border);
+        color: var(--text-primary);
+        background: var(--primary-button-color);
+        margin-left: auto;
 }
 
 /*container  */
 #design-b-container {
     margin: auto;
 }
+
 /*list header */
 #design-b-header {
     display: grid;
     grid-template-columns: 48px 1fr 90px 110px;
-        font-size: 12px;
+    font-size: 12px;
         padding: 6px 10px;
     text-align: center;
 }
@@ -54,19 +59,21 @@
 
 .design-b-row-attendee {
     display: grid;
+    gap: 10px;
     grid-template-columns: 48px 1fr 90px 110px;
     align-items: center;
     text-align: center;
     background: var(--row-backbround);
-        border-radius: var(--radius);
+    border-radius: var(--radius);
         padding: 10px;
         box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+        border: var(--border-color)
 }
 
 /* avatar */
 .design-b-col-avatar {
     display: flex;
-        justify-content: center;
+    justify-content: center;
         align-items: center;
     width: 50px;
     height: 50px;
@@ -89,7 +96,7 @@
 .design-b-col-gender,
 .design-b-col-preference {
     font-weight: 500;
-        font-size: var(--textSize);
+    font-size: var(--textSize);
     }
     
     .design-b-col-preference {
@@ -97,77 +104,77 @@
     align-items: center;
     justify-content: center;
     gap: 5px;
-    }
-    
-    /* filter */
-    .hidden {
-        display: none;
-    }
-    
-    /* prevent interaction from the rest of the page */
-    #design-b-filter-overlay {
-        position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-    
-        background: rgba(0, 0, 0, 0.4);
-        z-index: 999;
-    }
-    
-    /* filter modal */
-    #design-b-filter-panel {
-        position: fixed;
-    
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-    
-        background: white;
-        padding: 25px;
-    
-        width: 320px;
-        border-radius: 8px;
-        box-shadow: 0 5px 25px rgba(0, 0, 0, 0.3);
-    
-        z-index: 1000;
-    }
-    
-    #design-b-filter-panel h3 {
-        margin-top: 0;
-        margin-bottom: 10px;
-    }
-    
-    #design-b-filter-panel h4 {
-        margin-bottom: 5px;
-    }
-    
-    .design-b-filter-section label {
-        display: flex;
-        align-items: center;
-        gap: 8px;
-        margin-bottom: 6px;
-        font-size: var(--textSize);
-    }
-    
-    .design-b-filter-section input {
-        accent-color: var(--accent)
-    }
-    
-    #design-b-filter-footer {
-        display: flex;
-        justify-content: flex-end;
-        gap: 10px;
-    }
-    
-    #design-b-filter-panel button {
-        width: 40%;
-        padding: 10px;
-        border-radius: 10px;
-        margin-bottom: 8px;
-    }
-    
-    #design-b-filter-apply {
-        background: var(--accent);
+}
+
+/* filter */
+.hidden {
+    display: none;
+}
+
+/* prevent interaction from the rest of the page */
+#design-b-filter-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 999;
+}
+
+/* filter modal */
+#design-b-filter-panel {
+    position: fixed;
+
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    background: var(--page-bg);
+    padding: 25px;
+
+    width: 320px;
+    border-radius: 8px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.3);
+
+    z-index: 1000;
+}
+
+#design-b-filter-panel h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+#design-b-filter-panel h4 {
+    margin-bottom: 5px;
+}
+
+.design-b-filter-section label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 6px;
+    font-size: var(--textSize);
+}
+
+.design-b-filter-section input {
+    accent-color: var(--primary-button-color)
+}
+
+#design-b-filter-footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+#design-b-filter-panel button {
+    width: 40%;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 8px;
+}
+
+#design-b-filter-apply {
+    background: var(--primary-button-color)
 }
