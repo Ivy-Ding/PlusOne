@@ -1,8 +1,6 @@
 :root {
-    /* placeholder variables since we haven't settled with final palatte yet */
     --row-backbround: lighten($var(--page-bg), 30%);
     --radius: 14px;
-    /*matched eventDetails  */
     --textSize: 13px;
 }
 
@@ -32,15 +30,16 @@
 #design-b-header,
 .design-b-row-attendee {
     display: grid;
-    /* grid-template-columns: 50px 1fr 80px 110px; */
     grid-template-columns: 50px 4fr 1fr 3fr;
     text-align: center;
     gap: 3px;
 }
+
 .design-b-row-attendee:active {
     filter: brightness(90%);
     transform: scale(0.99);
 }
+
 /*list header */
 #design-b-header {
     font-size: 12px;
@@ -60,7 +59,7 @@
     background: var(--row-backbround);
     border-radius: var(--radius);
     padding: 10px;
-        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
         border: var(--border-color)
 }
 
@@ -99,7 +98,7 @@
     align-items: center;
     justify-content: center;
     gap: 2px;
-        text-wrap: wrap;
+    text-wrap: wrap;
 }
 
 /* filter */
@@ -107,7 +106,7 @@
     display: none;
 }
 
-/* prevent interaction from the rest of the page */
+/* prevent the list from being clickable*/
 #design-b-filter-overlay {
     position: fixed;
     top: 0;
