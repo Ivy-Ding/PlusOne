@@ -67,7 +67,7 @@ function setupAddFriend(person) {
 
   addFriendBtn.addEventListener("click", () => {
     if (!requestSent) {
-      addFriendBtnTxt.textContent = `Request sent`;
+      addFriendBtnTxt.textContent = `Request Sent`;
       addFriendBtn.classList.add("added");
       requestSent = true;
     } else {
