@@ -67,7 +67,7 @@ function updateUI(eventId) {
         imComingBtn.classList.remove("not-going");
 
         viewBtn.classList.remove("hidden");
-        viewBtn.href = `designA.html`;
+        viewBtn.href = `designB.html?eventId=${eventId}`;
     } else {
         imComingBtn.textContent = "Join Event";
         imComingBtn.classList.add("not-going");
